@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Txreex/Project-Ejaculation/issues"
   },
-  "homepage": "https://github.com/Txreex/Project-Ejaculation#readme"
+  "homepage": "https://github.com/Txreex/Project-Ejaculation#readme",
+  "dependencies": {
+    "electron": "^30.0.3"
+  }
 }
