@@ -1,17 +1,19 @@
-document.getElementById("my_h1").textContent = "Ligma balls";
+document.getElementById("my_h1").textContent = "EVM";
 
-let count = 0;
+let count_bjp = 0;
+let count_congress = 0;
+let count_aap = 0;
 
-document.getElementById('increase').onclick = function(){
-    count++;
-    document.getElementById('count').textContent = count;
-}
-document.getElementById('decrease').onclick = function(){
-    count--;
-    document.getElementById('count').textContent = count;
-}
-document.getElementById('reset').onclick = function(){
-    count = 0;
-    document.getElementById('count').textContent = count;
-}
 
+document.getElementById('bjp').onclick = function(){
+    count_bjp++
+    document.getElementById('bjp_count').textContent = count_bjp
+}
+document.getElementById('congress').onclick = function(){
+    count_bjp++
+    document.getElementById('bjp_count').textContent = count_bjp
+}
+document.getElementById('aap').onclick = function(){
+    count_bjp++
+    document.getElementById('bjp_count').textContent = count_bjp
+}
