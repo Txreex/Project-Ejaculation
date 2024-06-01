@@ -3,36 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        /* Flexbox layout */
-        .button-container {
-            display: flex;
-            align-items: center;
-            justify-content: flex-start; /* Align items to the start (left) */
-            gap: 20px; /* Gap between button and count */
-        }
-
-        /* Style for the count */
-        .count {
-            font-size: 75px;
-        }
-    </style>
+    <title>Fuck Everyone</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <h1 id="my_h1"></h1>
-    <div class="button-container">
-        <button id='bjp'><img src="/Users/apple/Desktop/%d/Project-Ejaculation/bjp.png" width="100" height="100"></button>
-        <p3 id='bjp_count' class="count">0</p3>
+    <div class="main">
+        <video autoplay muted loop class="background-video" id = 'bak'>
+            <source src ="vid.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <nav class="nav__bar">
+            <span class="nav__name"><h1>{Name}</h1></span>
+            <div class="nav__links">
+                <h4>Home</h4>
+                <h4>AAA-Titles</h4>
+                <h4>Indie-Titles</h4>
+                <h4>New-&-Popular</h4>
+                <h4>My-List</h4>
+                <h4>Browse-By-Year</h4>
+                <input type="text" class="search-input">
+                <div class = buttons>
+                    <button class="nav-button-search"><i class = 'fa fa-search'></i></button>
+                    <button class="nav-button"><i class = 'fa fa-bell'></i></button>
+                    <button class="nav-button"><i class = 'fa fa-user'></i></button>
+                </div>
+            </div>
+        </nav>
+        <div class="box"></div>  
     </div>
-    <div class="button-container">
-        <button id='congress'><img src="/Users/apple/Desktop/%d/Project-Ejaculation/congress.png" width="100" height="100"></button>
-        <p3 id='congress_count' class="count">0</p3>
-    </div>
-    <div class="button-container">
-        <button id='aap'><img src="/Users/apple/Desktop/%d/Project-Ejaculation/aap.png" width="100" height="100"></button>
-        <p3 id='aap_count' class="count">0</p3>
-    </div>
-    <script src='/Users/apple/Desktop/%d/Project-Ejaculation/index.js'></script>
+    <main>
+        <div class = 'text-on-vid'>
+            <img src="it2.png" alt="" width="300px">
+            <p id = 'discription'>Embark on the craziest journey of your life in It Takes Two. Invite a friend to join for free with Friend’s Pass and work together across a huge variety of gleefully disruptive gameplay challenges. Winner of GAME OF THE YEAR at the Game Awards 2021.</p>
+            <button id = 'play'>PLAY</button>
+            <button id = 'more-info'>MORE-INFO</button>
+        </div>
+        <div class ='vertical'>
+            <img src="up.png" alt="" width="40px"><button class = 'vertical_buttons'></button></img>
+            <img src="home.png" alt="" width="40px"><button class = 'vertical_buttons'></button></img>
+            <img src="download.png" alt="" width="40px"><button class = 'vertical_buttons'></button></img>
+            <img src="addons.png" alt="" width="40px"><button class = 'vertical_buttons'></button></img>
+            <img src="settings.png" alt="" width="40px"><button class = 'vertical_buttons'></button></img>
+            <img src="down.png" alt="" width="40px"><button class = 'vertical_buttons'></button></img>
+            
+        </div>
+    </main>
+    <script>
+        var video = document.getElementById("backgroundVideo");
+        video.muted = false;
+        video.volume = 0.3; // Adjust volume between 0 and 1
+    </script>
 </body>
 </html>
