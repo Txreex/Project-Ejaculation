@@ -116,6 +116,13 @@ nav {
 .buttons {
     margin-right: -120px;
 }
+
+/* this is for opening the menu in smol screens (it just works dont ask me) */
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+}
+
 .text-on-vid {
     height: 20px;
     width: 800px;
@@ -125,6 +132,7 @@ nav {
     z-index: 2; /* Ensure the text is in front of the video */
     color: white;
 }
+
 .vid-buttons{
     font-size: 32px;
     position: absolute;
@@ -132,9 +140,11 @@ nav {
     left: 80px; /* Adjust left position as needed */
     z-index: 2; /* Ensure the text is in front of the video */
 }
+
 #discription{
     margin-bottom: 5px;
 }
+
 #play{
     font-size: 15px;
     border: 0px;
@@ -143,6 +153,7 @@ nav {
     height: 45px;
     background-color: white;
 }
+
 #more-info{
     padding: 0px;
     margin-top: -100px;
@@ -153,10 +164,10 @@ nav {
     height: 45px;
     background-color: white;
 }
-.vertical{
-    height: 200px;
+
+/* fixed this */
+.vertical {
     backdrop-filter: blur(10px);
-    padding: 0px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -165,17 +176,81 @@ nav {
     text-align: center;
     border-radius: 100px;
     z-index: 3;
-    width: 200px;
-    margin-top: -600px;
-    margin-left: 1400px;
-    height: 450px;
     width: 50px;
     position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
 }
+
 .vertical_buttons{
     margin:15px;
     border: none;
     border-color: #333;
     backdrop-filter: blur(10px);
     border-radius: 100px;
+}
+
+/* this is for opening the menu in smol screens (it just works dont ask me) */
+@media (max-width: 768px) {
+    .nav__bar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav__links {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .nav__links h4 {
+        margin: 5px 0;
+    }
+
+    .hamburger-menu {
+        display: block;
+        margin-left: auto;
+    }
+
+    .text-on-vid {
+        width: 100%;
+        top: 150px;
+        left: 20px;
+        text-align: center;
+    }
+
+    .vid-buttons {
+        top: 350px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 480px) {
+    .nav__name {
+        margin-left: 0;
+    }
+
+    .nav__links {
+        width: 100%;
+        align-items: center;
+    }
+
+    .text-on-vid {
+        top: 100px;
+        left: 10px;
+        right: 10px;
+        text-align: center;
+    }
+
+    .vid-buttons {
+        top: 300px;
+    }
+
+    .vertical {
+        right: 10px;
+    }
 }
