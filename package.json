@@ -1,0 +1,23 @@
+{
+  "name": "project-ejaculation",
+  "productName": "project-ejaculation",
+  "version": "1.0.0",
+  "description": "<br>\r Dunno what i am doing <br>\r US BHAI US<br>\r 🤝<br>",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Txreex/Project-Ejaculation.git"
+  },
+  "author": "Twee, YJuDeAd",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Txreex/Project-Ejaculation/issues"
+  },
+  "homepage": "https://github.com/Txreex/Project-Ejaculation#readme",
+  "dependencies": {
+    "electron": "^30.0.3"
+  }
+}
