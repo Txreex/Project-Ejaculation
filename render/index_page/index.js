@@ -1,4 +1,4 @@
-function changImage(id,url_toChange,url_toChangeTo) {
+function changeImage(id,url_toChange,url_toChangeTo) {
     var image = document.getElementById(id);
     if (image.src.match(url_toChange)) {
         image.src = url_toChangeTo;
@@ -42,6 +42,21 @@ document.getElementById("menu-toggle").onclick = function () {
 //     changeIcon();
 // }
 
+// document.getElementById("vol_button").onclick = function() {
+//     changImage("vol_button","../Assets/Icons/unmute.png","../Assets/Icons/mute.png")
+// }
+
+let vol = true;
+
 document.getElementById("vol_button").onclick = function() {
-    changImage("vol_button","../Assets/Icons/unmute.png","../Assets/Icons/mute.png")
+    changeImage("vol_button","../Assets/Icons/mute.png","../Assets/Icons/unmute.png")
+    let video = document.getElementById("bak");
+    if(video.muted){
+        video.muted = false;
+    } else {
+        video.muted = true; 
+    }
 }
+
+
+
