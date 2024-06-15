@@ -1,3 +1,13 @@
+function changImage(id,url_toChange,url_toChangeTo) {
+    var image = document.getElementById(id);
+    if (image.src.match(url_toChange)) {
+        image.src = url_toChangeTo;
+    } 
+    else {
+        image.src = url_toChange;
+    }
+}
+
 document.getElementById("bell").onclick = function(){
     console.log("Search")
 }
@@ -31,3 +41,7 @@ document.getElementById("menu-toggle").onclick = function () {
 // document.getElementById("vol_button").onClick = function() {
 //     changeIcon();
 // }
+
+document.getElementById("vol_button").onclick = function() {
+    changImage("vol_button","../Assets/Icons/unmute.png","../Assets/Icons/mute.png")
+}
