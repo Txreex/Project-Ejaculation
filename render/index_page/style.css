@@ -153,3 +153,19 @@ nav {
     margin-left: 5px;
     }
 }
+
+.me-4 {
+    transition: all 0.3s ease-in-out;
+}
+.me-4:hover {
+    transform: scale(1.5);
+    cursor: pointer;
+}
+
+.search-icon{
+    transition: all 0.2s ease-in-out;
+}
+.search-icon:hover {
+    cursor: pointer;
+    transform: scale(1.40);
+}
