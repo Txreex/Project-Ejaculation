@@ -4,8 +4,10 @@ const path = require('path');
 function createMainWindow() {
     const mainWindow = new BrowserWindow({
         title: 'Test',
-        width: 800,
-        height: 600
+        width: 1280,
+        height: 720,
+        minWidth: 500,
+        minHeight: 650
     });
 
     mainWindow.loadFile(path.join(__dirname, './render/index_page/index.html'));
