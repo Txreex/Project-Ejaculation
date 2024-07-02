@@ -12,14 +12,24 @@
   <body>
     <main class="text-light">
       <div>
+        <!-- <div class="object-fit-cover position-relative z-n1 youtube-container">
+          <iframe
+            id="Vid" 
+            src="" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen
+          ></iframe>
+        </div> -->
         <div>
-          <video class="object-fit-cover w-100 h-100 position-absolute z-n1" autoplay loop muted>
-            <source src="../Assets/vid.mp4" type="video/mp4" />
+          <video class="object-fit-cover w-100 h-100 position-absolute z-n1" id="Vid" autoplay loop muted>
+            <source src="" type="video/mp4" />
           </video>
         </div>
         <div class="text-on-vid position-absolute z-1">
-          <img src="../Assets/it2.png" width="300px">
-          <p>Embark on the craziest journey of your life in It Takes Two. Invite a friend to join for free with Friend’s Pass and work together across a huge variety of gleefully disruptive gameplay challenges. Winner of GAME OF THE YEAR at the Game Awards 2021.</p>
+          <img id="Logo" src="" width="300px">
+          <p id="summary"></p>
           <button class="btn btn-dark btn-lg">PLAY</button>
           <button class="btn btn-dark btn-lg">MORE-INFO</button>
         </div>
@@ -57,6 +67,6 @@
       <div class="box"></div>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="index.js"></script>
+    <script src="test.js"></script>
   </body>
 </html>

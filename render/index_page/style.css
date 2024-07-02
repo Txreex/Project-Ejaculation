@@ -47,7 +47,7 @@ nav {
 .nav__name:hover {
     /* filter: opacity(50%);  Why add This*/
     cursor: pointer;
-    transform: scale(1.5); /* Use this instead of font-size for the left text issue (use both in the sweet spot so it looks nice, I tried to do it below but needs more margin because use left right adjust nhi karta transform  ) */
+    transform: scale(1.2); /* Use this instead of font-size for the left text issue (use both in the sweet spot so it looks nice, I tried to do it below but needs more margin because use left right adjust nhi karta transform  ) */
 }
 
 .nav__links {
@@ -105,7 +105,24 @@ nav {
     left: 60px;
 }
 
-@media (max-width: 950px){
+.youtube-container {
+    overflow: hidden;
+    width: 100%;
+    /* Keep it the right aspect-ratio */
+    aspect-ratio: 16/9;
+    /* No clicking/hover effects */
+    pointer-events: none;
+} 
+
+.youtube-container iframe {
+      /* Extend it beyond the viewport... */
+      width: 300%;
+      height: 100%;
+      /* ...and bring it back again */
+      margin-left: -100%;
+}
+
+@media (max-width: 1200px){
     .text-on-vid {
         width: 100%;
         top: 150px;

@@ -1,3 +1,9 @@
+// this is for opening the menu in smol screens (it just works dont ask me)
+document.getElementById("menu-toggle").onclick = function () {
+    var navLinks = document.querySelector(".nav__links");
+    navLinks.style.display = navLinks.style.display === "flex" ? "none" : "flex";
+};
+
 function changeImage(id,url_toChange,url_toChangeTo) {
     var image = document.getElementById(id);
     if (image.src.match(url_toChange)) {
@@ -6,10 +12,6 @@ function changeImage(id,url_toChange,url_toChangeTo) {
     else {
         image.src = url_toChange;
     }
-}
-
-document.getElementById("bell").onclick = function(){
-    console.log("Search")
 }
 
 document.getElementById("download").onclick = function(){
@@ -23,12 +25,6 @@ document.getElementById("lib").onclick = function(){
 document.getElementById("home").onclick = function(){
     window.location.href = "index.html"
 }
-
-// this is for opening the menu in smol screens (it just works dont ask me)
-document.getElementById("menu-toggle").onclick = function () {
-    var navLinks = document.querySelector(".nav__links");
-    navLinks.style.display = navLinks.style.display === "flex" ? "none" : "flex";
-};
 
 // function changeIcon() {
 //     if (document.getElementById("vol_button").src == "../Assets/Icons/unmute.png") {
