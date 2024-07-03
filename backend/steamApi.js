@@ -10,11 +10,19 @@ export async function fetchAppDetails(appId) {
                 appID: appDetails.steam_appid,
                 name: appDetails.name,
                 description: appDetails.short_description,
+                detailed_description: appDetails.detailed_description,
                 logoUrl: appDetails.header_image.replace('header.jpg', 'logo.png'),
+                coverUrl: appDetails.header_image.replace('header.jpg', 'library_600x900_2x.jpg'),
+                bannerUrl: appDetails.header_image.replace('header.jpg', 'library_hero.jpg'),
+                coming_soon: appDetails.release_date.coming_soon,
+                release_date: appDetails.release_date.date,             
+                devs: appDetails.developers,
+                genres: appDetails.genres.map(genre => genre.description),
                 videos: appDetails.movies.map(video => ({
                     name: video.name,
                     link: video.mp4.max
-                }))
+                })),
+                screenshots: appDetails.screenshots.map(image => image.path_full)
             };
         } else {
             console.log('Failed to fetch app details');
