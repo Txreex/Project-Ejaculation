@@ -211,3 +211,8 @@ nav {
 .vertical_buttons:hover{
     transform: scale(1.4); /* right here is the buttons in the vertical navbar ->  it does not adjust up and down but only increases with a fixed point in the center*/
 }
+
+.vid_controls{
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+}

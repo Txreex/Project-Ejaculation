@@ -12,16 +12,6 @@
   <body>
     <main class="text-light">
       <div>
-        <!-- <div class="object-fit-cover position-relative z-n1 youtube-container">
-          <iframe
-            id="Vid" 
-            src="" 
-            title="YouTube video player" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen
-          ></iframe>
-        </div> -->
         <div>
           <video class="object-fit-cover w-100 h-100 position-absolute z-n1" id="Vid" autoplay loop muted>
             <source src="" type="video/mp4" />
@@ -32,6 +22,7 @@
           <p id="summary"></p>
           <button class="btn btn-dark btn-lg">PLAY</button>
           <button class="btn btn-dark btn-lg" id="more-info">MORE-INFO</button>
+          <img class="vid_controls" src = '../Assets/Icons/mute.png' width = 50px id="vol_button"/>
         </div>
         <nav class="nav__bar position-absolute z-1">
           <h1 class="nav__name fw-bold">{Name}</h1>

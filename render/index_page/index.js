@@ -1,16 +1,7 @@
 import { fetchAppList } from '../../backend/steamApi.js';
+import { changeImage } from '../../backend/changeImage.js'
 
 let description, logoUrl, vid_link;
-
-function changeImage(id,url_toChange,url_toChangeTo) {
-  var image = document.getElementById(id);
-  if (image.src.match(url_toChange)) {
-      image.src = url_toChangeTo;
-  } 
-  else {
-      image.src = url_toChange;
-  }
-} 
 
 window.onload = async function() {
   const appDetails = await fetchAppList ("Counter-Strike 2");
@@ -65,11 +56,9 @@ document.getElementById("more-info").onclick = function(){
   window.location.href = "../more-info/more-info.html"
 }
 
-let vol = true;
-
 document.getElementById("vol_button").onclick = function() {
     changeImage("vol_button","../Assets/Icons/mute.png","../Assets/Icons/unmute.png")
-    let video = document.getElementById("bak");
+    let video = document.getElementById("Vid");
     if(video.muted){
         video.muted = false;
     } else {
