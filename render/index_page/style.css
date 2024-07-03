@@ -215,4 +215,5 @@ nav {
 .vid_controls{
     backdrop-filter: blur(10px);
     border-radius: 10px;
+    cursor: pointer;
 }
