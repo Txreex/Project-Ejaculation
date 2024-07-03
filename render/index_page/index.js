@@ -1,46 +1,69 @@
-// this is for opening the menu in smol screens (it just works dont ask me)
-document.getElementById("menu-toggle").onclick = function () {
-    var navLinks = document.querySelector(".nav__links");
-    navLinks.style.display = navLinks.style.display === "flex" ? "none" : "flex";
-};
+import { fetchAppList } from '../../backend/steamApi.js';
+
+let description, logoUrl, vid_link;
 
 function changeImage(id,url_toChange,url_toChangeTo) {
-    var image = document.getElementById(id);
-    if (image.src.match(url_toChange)) {
-        image.src = url_toChangeTo;
-    } 
-    else {
-        image.src = url_toChange;
-    }
+  var image = document.getElementById(id);
+  if (image.src.match(url_toChange)) {
+      image.src = url_toChangeTo;
+  } 
+  else {
+      image.src = url_toChange;
+  }
+} 
+
+window.onload = async function() {
+  const appDetails = await fetchAppList ("Counter-Strike 2");
+  if (appDetails) {
+    description = appDetails.description;
+    logoUrl = appDetails.logoUrl;
+    vid_link = appDetails.videos.map(video => video.link);
+    document.getElementById("summary").textContent = description;
+    document.getElementById('Logo').src = logoUrl;
+    document.getElementById('Vid').src = vid_link[0];
+  }
+};
+
+document.querySelector('.search-btn').addEventListener('click', searchApp);
+document.querySelector('.search-input').addEventListener('keyup', function(event) {
+  if (event.key === 'Enter') {
+    searchApp();
+  }
+});
+
+async function searchApp() {
+  const query = document.querySelector('.search-input').value;
+  const appDetails = await fetchAppList(query);
+  if (appDetails) {
+    description = appDetails.description;
+    logoUrl = appDetails.logoUrl;
+    vid_link = appDetails.videos.map(video => video.link);   
+    document.getElementById("summary").textContent = description;
+    document.getElementById('Logo').src = logoUrl;
+    document.getElementById('Vid').src = vid_link[0];
+  }
 }
 
+document.getElementById("menu-toggle").onclick = function () {
+  var navLinks = document.querySelector(".nav__links");
+  navLinks.style.display = navLinks.style.display === "flex" ? "none" : "flex";
+};
+
 document.getElementById("download").onclick = function(){
-    window.location.href = "../download_page/download.html"
+  window.location.href = "../download_page/download.html"
 }
 
 document.getElementById("lib").onclick = function(){
-    window.location.href = "../library_page/library.html"
+  window.location.href = "../library_page/library.html"
 }
 
 document.getElementById("home").onclick = function(){
-    window.location.href = "index.html"
+  window.location.href = "index.html"
 }
 
-// function changeIcon() {
-//     if (document.getElementById("vol_button").src == "../Assets/Icons/unmute.png") {
-//         document.getElementById("vol_").src = "../Assets/Icons/mute.png";
-//     } else {
-//         document.getElementById("vol_button").src = "../Assets/Icons/unmute.png";
-//     }
-// }
-
-// document.getElementById("vol_button").onClick = function() {
-//     changeIcon();
-// }
-
-// document.getElementById("vol_button").onclick = function() {
-//     changImage("vol_button","../Assets/Icons/unmute.png","../Assets/Icons/mute.png")
-// }
+document.getElementById("more-info").onclick = function(){
+  window.location.href = "../more-info/more-info.html"
+}
 
 let vol = true;
 
@@ -53,6 +76,3 @@ document.getElementById("vol_button").onclick = function() {
         video.muted = true; 
     }
 }
-
-
-

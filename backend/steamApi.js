@@ -1,7 +1,6 @@
-// steamApi.js
 export async function fetchAppDetails(appId) {
     try {
-        const response = await fetch(`https://store.steampowered.com/api/appdetails?appids=${appId}`);
+        const response = await fetch(`https://store.steampowered.com/api/appdetails?appids=${appId}&l=en`);
         const data = await response.json();
 
         if (data[appId].success) {
@@ -33,7 +32,7 @@ export async function fetchAppList(game_name) {
         const data = await response.json();
         const apps = data.applist.apps;
 
-        const app = apps.find(app => app.name === game_name);
+        const app = apps.find(app => app.name == game_name);
         if (app) {
             const appId = app.appid;
             return await fetchAppDetails(appId);
