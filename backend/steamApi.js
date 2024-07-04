@@ -13,7 +13,7 @@ export async function fetchAppDetails(appId) {
         appID = appDetails.steam_appid;
         name = appDetails.name;
         description = appDetails.short_description;
-        detailed_description = appDetails.detail_description;
+        detailed_description = appDetails.detailed_description;
         logoUrl = appDetails.header_image.replace('header.jpg', 'logo.png');
         coverUrl = appDetails.header_image.replace('header.jpg', 'library_600x900_2x.jpg');
         bannerUrl = appDetails.header_image.replace('header.jpg', 'library_hero.jpg');
