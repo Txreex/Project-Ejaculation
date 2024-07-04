@@ -10,7 +10,19 @@ body {
     background-color: black;
 }
 
-.box {
+.text-on-vid {
+    height: 20px;
+    width: 800px;
+    top: 180px;
+    left: 60px;
+}
+.vid_controls {
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.box { /*A box over the video with black background color and less opacity (to darken the video)*/
     margin-top: 0px;
     height: 100%;
     width: 100%;
@@ -21,14 +33,7 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-nav {
-    max-width: 100vw;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.nav__bar {
+.nav__bar { /*Navbar*/
     width: 98%;
     height: 55px;
     border-radius: 100px;
@@ -36,30 +41,48 @@ nav {
     opacity: 0.8;
     margin-top: 7px;
     margin-left: 13px;
+    max-width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
-.nav__name {
+.nav__name { /*Logo*/
     font-size: 34px;
     margin-left: 20px;
     transition: all 0.3s ease-in-out;
 }
 
-.nav__name:hover {
+.nav__name:hover { /*on logo hover*/
     /* filter: opacity(50%);  Why add This*/
     cursor: pointer;
-    transform: scale(1.2); /* Use this instead of font-size for the left text issue (use both in the sweet spot so it looks nice, I tried to do it below but needs more margin because use left right adjust nhi karta transform  ) */
+    transform: scale(1.2);
+    /* Use this instead of font-size for the left text issue (use both in the sweet spot so it looks nice, I tried to do it below but needs more margin because use left right adjust nhi karta transform  ) */
 }
 
-.nav__links {
+.nav__links { /* a div inside nav__bar which contains nav-links*/
     display: flex;
     align-items: center;
-} 
+}
 
-.nav__links h4 {
+.nav__links h4 { /*h4 inside nav__links(div )*/
     margin: 0 10px;
 }
 
-.search-container{
+.nav_buttons { /*buttons inside nav*/
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.nav_buttons:hover { /*hover effect for buttons inside nav*/
+    /* font-size: 22px; */
+    transform: scale(1.2);
+    /* Here i tried to use both but margin ajeeb lag rha with only transform */
+    /*needs more margin or something else*/
+    cursor: pointer;
+}
+
+.search-container { /*search -bar*/
     margin-left: 60px;
     margin-right: 70px;
     background: #fff;
@@ -72,123 +95,42 @@ nav {
     cursor: pointer;
 }
 
-.search-input {
+.search-input { /*input for search-bar*/
     background: transparent;
     border: none;
-    outline:none;
+    outline: none;
     width: 220px;
     font-weight: 500;
     font-size: 16px;
     transition: 0.8s;
 }
 
-.nav_buttons {
-    font-size: 18px;
-    transition: all 0.3s ease;
+.search-icon { /*search.png (is an image which acts as search button)*/    
+    transition: all 0.2s ease-in-out;
 }
 
-.nav_buttons:hover {
-    /* font-size: 22px; */
-    transform: scale(1.2); /* Here i tried to use both but margin ajeeb lag rha with only transform */ /*needs more margin or something else*/
+.search-icon:hover {
     cursor: pointer;
+    transform: scale(1.40);
+    /* also did this for the search icon in the search bar, tell me if it looks ok */
 }
 
-.hamburger-menu {
+.hamburger-menu { /*still have to fix*/
     display: none;
     cursor: pointer;
 }
 
-.text-on-vid {
-    height: 20px;
-    width: 800px;
-    top: 180px; 
-    left: 60px;
-}
 
-.youtube-container {
-    overflow: hidden;
-    width: 100%;
-    /* Keep it the right aspect-ratio */
-    aspect-ratio: 16/9;
-    /* No clicking/hover effects */
-    pointer-events: none;
-} 
-
-.youtube-container iframe {
-      /* Extend it beyond the viewport... */
-      width: 300%;
-      height: 100%;
-      /* ...and bring it back again */
-      margin-left: -100%;
-}
-
-@media (max-width: 1200px){
-    .text-on-vid {
-        width: 100%;
-        top: 150px;
-        left: 0px;
-        text-align: center;
-    }
-
-    .nav__links {
-        display: none;
-        flex-direction: column;
-        align-items: flex-start;
-        width: 100%;
-        margin-top: 10px;
-    }
-
-    .hamburger-menu {
-        display: block;
-    }
-    
-    .nav__bar {
-        width: 98%;
-        height: 55px;
-        border-radius: 100px;
-        backdrop-filter: blur(10px);
-        opacity: 0.8;
-        margin-top: 7px;
-        margin-left: 5px;
-    }
-}
-
-@media (max-width: 480px) {
-    .text-on-vid {
-        top: 100px;
-        left: 0px;
-        right: 0px;
-        text-align: center;
-    }
-
-    .nav__bar {
-    width: 98%;
-    height: 55px;
-    border-radius: 100px;
-    backdrop-filter: blur(10px);
-    opacity: 0.8;
-    margin-top: 7px;
-    margin-left: 5px;
-    }
-}
-
-.me-4 {
+.me-4 { /*me-4 includes bell-icon and profile-icon*/
     transition: all 0.3s ease-in-out;
 }
-.me-4:hover {
+
+.me-4:hover { /*hover effect on */
     transform: scale(1.5);
     cursor: pointer;
 }
 
-.search-icon{
-    transition: all 0.2s ease-in-out;
-}
-.search-icon:hover {
-    cursor: pointer;
-    transform: scale(1.40); /* also did this for the search icon in the search bar, tell me if it looks ok */
-}
-
-.vertical_navbar {
+.vertical_navbar { /*vertical Nav-bar as the name suggests*/
     backdrop-filter: blur(10px);
     display: flex;
     flex-direction: column;
@@ -204,16 +146,63 @@ nav {
     top: 50%;
     transform: translateY(-50%);
 }
-.vertical_buttons{
+
+.vertical_buttons { /*buttons on the nav-bar , includes but is not limited to : up.png, settings.png, home.png, addons.png(being used as a library now) , down.png*/
     margin: 15px;
     transition: all 0.3s ease;
 }
-.vertical_buttons:hover{
-    transform: scale(1.4); /* right here is the buttons in the vertical navbar ->  it does not adjust up and down but only increases with a fixed point in the center*/
-}
 
-.vid_controls{
-    backdrop-filter: blur(10px);
-    border-radius: 10px;
-    cursor: pointer;
+.vertical_buttons:hover { /*hover effect on vertical buttons as aforementioned*/
+    transform: scale(1.4);
+    /* right here is the buttons in the vertical navbar ->  it does not adjust up and down but only increases with a fixed point in the center*/
+}
+    
+@media (max-width: 1200px) {
+    .text-on-vid {
+        width: 100%;
+        top: 150px;
+        left: 0px;
+        text-align: center;
+    }
+            
+    .nav__bar {
+        width: 98%;
+        height: 55px;
+        border-radius: 100px;
+        backdrop-filter: blur(10px);
+        opacity: 0.8;
+        margin-top: 7px;
+        margin-left: 5px;
+    }
+    
+    .nav__links {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        margin-top: 10px;
+    }
+        
+    .hamburger-menu {
+        display: block;
+    }
+}
+    
+@media (max-width: 480px) {
+    .text-on-vid {
+        top: 100px;
+        left: 0px;
+        right: 0px;
+        text-align: center;
+    }
+    
+    .nav__bar {
+        width: 98%;
+        height: 55px;
+        border-radius: 100px;
+        backdrop-filter: blur(10px);
+        opacity: 0.8;
+        margin-top: 7px;
+        margin-left: 5px;
+    }
 }

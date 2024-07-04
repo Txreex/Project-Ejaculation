@@ -1,10 +1,13 @@
+//All the variables that are to be further used in different js files
 export let appID, name, description, detailed_description, logoUrl, coverUrl, bannerUrl, coming_soon, release_date, devs, vid_name, vid_link, genres, screenshots;
 
+//Fetchs all required data related to game with the help of steamid of that game
 export async function fetchAppDetails(appId) {
     try {
       const response = await fetch(`https://store.steampowered.com/api/appdetails?appids=${appId}`);
       const data = await response.json();
-  
+      
+      //Specifying which data is required
       if (data[appId].success) {
         const appDetails = data[appId].data;
         appID = appDetails.steam_appid;
@@ -47,6 +50,7 @@ export async function fetchAppDetails(appId) {
           screenshots.push(data.path_full)
         }
 
+        //Mainly Used for Debugging
         console.log(`ID: ${appID}`);
         console.log(`Name: ${name}`);
         console.log(`Description: ${description}`)
@@ -68,20 +72,22 @@ export async function fetchAppDetails(appId) {
       console.error('Error fetching app details:', error);
     }
 }
-  
+
+//Fetchs the steamid from the name of the game
 export async function fetchAppList(game_name) {
     try {
       const response = await fetch('https://api.steampowered.com/ISteamApps/GetAppList/v2/');
       const data = await response.json();
       const apps = data.applist.apps;
   
-      // Find the app you're interested in by name (e.g., "Counter-Strike 2")
+      //Find the app you're interested in by name (e.g., "Counter-Strike 2")
       const app = apps.find(app => app.name === game_name);
       if (app) {
         const appId = app.appid;
-        // Fetch the app details using the appId
+        //Fetch the app details using the appId
         await fetchAppDetails(appId);
       } else {
+        //Happens if the app is not in the list
         console.log("App not found");
       }
     } catch (error) {

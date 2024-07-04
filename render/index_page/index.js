@@ -1,7 +1,7 @@
 import { fetchAppList, description, logoUrl, vid_link } from '../../backend/steamApi.js'; //function for retriving artworks
 import { changeImage } from '../../backend/changeImage.js'
 
-//default game window
+//loads the default artwork of this page
 window.onload = async function() {
   await fetchAppList ("Counter-Strike 2");
   document.getElementById("summary").textContent = description;
@@ -18,6 +18,7 @@ async function searchApp() {
   document.getElementById('Vid').src = vid_link[0];
 }
 
+//adds function to search button and also a shortcut
 document.querySelector('.search-btn').addEventListener('click', searchApp);
 document.querySelector('.search-input').addEventListener('keyup', function(event) {
   if (event.key === 'Enter') {
