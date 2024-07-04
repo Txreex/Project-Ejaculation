@@ -1,33 +1,21 @@
-import { fetchAppList } from '../../backend/steamApi.js'; //function for retriving artworks
+import { fetchAppList, description, logoUrl, vid_link } from '../../backend/steamApi.js'; //function for retriving artworks
 import { changeImage } from '../../backend/changeImage.js'
-
-let description, logoUrl, vid_link;
 
 //default game window
 window.onload = async function() {
-  const appDetails = await fetchAppList ("Counter-Strike 2");
-  if (appDetails) {
-    description = appDetails.description;
-    logoUrl = appDetails.logoUrl;
-    vid_link = appDetails.videos.map(video => video.link);
-    document.getElementById("summary").textContent = description;
-    document.getElementById('Logo').src = logoUrl;
-    document.getElementById('Vid').src = vid_link[0];
-  }
+  await fetchAppList ("Counter-Strike 2");
+  document.getElementById("summary").textContent = description;
+  document.getElementById('Logo').src = logoUrl;
+  document.getElementById('Vid').src = vid_link[0];
 };
 
 //function to define working of search
 async function searchApp() {
   const query = document.querySelector('.search-input').value;
-  const appDetails = await fetchAppList(query);
-  if (appDetails) {
-    description = appDetails.description;
-    logoUrl = appDetails.logoUrl;
-    vid_link = appDetails.videos.map(video => video.link);   
-    document.getElementById("summary").textContent = description;
-    document.getElementById('Logo').src = logoUrl;
-    document.getElementById('Vid').src = vid_link[0];
-  }
+  await fetchAppList(query);
+  document.getElementById("summary").textContent = description;
+  document.getElementById('Logo').src = logoUrl;
+  document.getElementById('Vid').src = vid_link[0];
 }
 
 document.querySelector('.search-btn').addEventListener('click', searchApp);
