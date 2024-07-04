@@ -7,7 +7,6 @@ export async function fetchAppDetails(appId) {
   
       if (data[appId].success) {
         const appDetails = data[appId].data;
-        // Try to find the logo URL - this might be under different fields
         appID = appDetails.steam_appid;
         name = appDetails.name;
         description = appDetails.short_description;
