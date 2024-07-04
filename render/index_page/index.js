@@ -12,6 +12,7 @@ window.onload = async function() {
 //function to define working of search
 async function searchApp() {
   const query = document.querySelector('.search-input').value;
+  sessionStorage.setItem('searchQuery', query);
   await fetchAppList(query);
   document.getElementById("summary").textContent = description;
   document.getElementById('Logo').src = logoUrl;

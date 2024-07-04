@@ -2,8 +2,14 @@ import { bannerUrl, fetchAppList } from "../../backend/steamApi.js";
 
 //loads the default artwork of this page
 window.onload = async function() {
-    await fetchAppList ("Counter-Strike 2");
-    document.getElementById('Banner').src = bannerUrl;
+    const query = sessionStorage.getItem('searchQuery');
+    if (query) {
+        await fetchAppList (query);
+        document.getElementById('Banner').src = bannerUrl;
+    } else {
+        await fetchAppList ("Counter-Strike 2");
+        document.getElementById('Banner').src = bannerUrl;
+    }
 };
 
 //sends to download page
@@ -20,3 +26,7 @@ document.getElementById("lib").onclick = function(){
 document.getElementById("home").onclick = function(){
     window.location.href = "../index_page/index.html"
 }
+
+window.addEventListener('beforeunload', function () {
+    sessionStorage.removeItem('searchQuery');
+});
