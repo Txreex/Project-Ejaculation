@@ -1,4 +1,4 @@
-import { bannerUrl, fetchAppList } from "../../backend/steamApi.js";
+import { bannerUrl, fetchAppList, logoUrl } from "../../backend/steamApi.js";
 
 //loads the default artwork of this page
 window.onload = async function() {
@@ -6,9 +6,11 @@ window.onload = async function() {
     if (query) {
         await fetchAppList (query);
         document.getElementById('Banner').src = bannerUrl;
+        document.getElementById('Logo').src = logoUrl;
     } else {
         await fetchAppList ("Counter-Strike 2");
         document.getElementById('Banner').src = bannerUrl;
+        document.getElementById('Logo').src = logoUrl;
     }
 };
 
