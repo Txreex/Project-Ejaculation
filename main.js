@@ -15,7 +15,7 @@ function createMainWindow() {
         }
     });
 
-    mainWindow.loadFile(path.join(__dirname, './render/index_page/index.html'));
+    mainWindow.loadFile(path.join(__dirname, './render/game_page/game_page.html'));
 }
 
 //Starts the main window when the file is complied

@@ -1,0 +1,47 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.header{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.upper_nav{
+    position: relative;
+    z-index: 2;
+    background-color: black;
+    height: 7vh;
+    opacity: 50%;
+}
+.lower_nav{
+    z-index: 2;
+    width: 100vw;
+    background-color: black;
+    height: 10vh;
+    opacity: 50%;
+    position:absolute; 
+    bottom:64px;
+}
+.header_image{
+    top: -60px;
+    position: relative;
+    z-index: 1;
+}
+.header_image img{
+    height: 50vh;
+}
+.logo{
+    z-index: 2;
+    position:absolute; 
+    bottom:70px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.logo img{
+    width: 400px;
+    height: 30vh;
+}
