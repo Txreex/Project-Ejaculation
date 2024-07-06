@@ -67,12 +67,13 @@ body {
     display: flex;
     position: relative;
     flex-direction: row;
+    /* flex-wrap: wrap; */
     /* aspect-ratio: auto */
 }
 
 .poster img{
-    height: 79vh;
-    width: 30vw;
+    height: auto;
+    width: 450px;
     background-color: black;
     position: relative;
     top: -240px;
@@ -81,17 +82,18 @@ body {
     border-radius: 36px;
     box-shadow: 10px;
     flex-wrap: wrap;
+    aspect-ratio: 45/66;
 }
 
 .vid_box video{
     position: relative;
     z-index: 2;
+    height: auto;
     width: 65vw;
     left: 35px;
     top: -120px;
     border-radius: 36px;
-    flex-wrap: wrap;
-
+    align-self: flex-end;
 }
 
 .vertical_navbar {
