@@ -43,6 +43,7 @@ body {
 
 .header_image img{
     height: 50vh;
+    width: 100vw;
 }
 
 .logo{
@@ -56,6 +57,37 @@ body {
 .logo img{
     width: 400px;
     height: 30vh;
+}
+
+.bund{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    /* aspect-ratio: auto */
+}
+
+.poster img{
+    height: 79vh;
+    width: 30vw;
+    background-color: black;
+    position: relative;
+    top: -240px;
+    z-index: 3;
+    left: 15px;
+    border-radius: 36px;
+    box-shadow: 10px;
+    flex-wrap: wrap;
+}
+
+.vid_box video{
+    position: relative;
+    z-index: 2;
+    width: 65vw;
+    left: 35px;
+    top: -120px;
+    border-radius: 36px;
+    flex-wrap: wrap;
+
 }
 
 .vertical_navbar {
