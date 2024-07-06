@@ -46,8 +46,9 @@ body {
 }
 
 .header_image img{
-    height: 50vh;
+    height: auto;
     width: 100vw;
+    aspect-ratio: 4.3;
 }
 
 .logo{
@@ -55,32 +56,48 @@ body {
     position:absolute; 
     bottom:70px;
     left: 50%;
+    height: 170px;
+    top: 100px;
     transform: translateX(-50%);
+    border: 3px solid red;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: hidden; 
 }
 
 .logo img{
+    position: relative;
+    top: 10px;
     width: 400px;
-    height: 30vh;
+    object-fit: cover;
+    /* height: auto; */
+    /* aspect-ratio: 18/9; */
 }
 
 .bund{
+    border: 3px solid red;
     display: flex;
     position: relative;
+    /* align-content: flex-end; */
+    align-items: flex-end;
+    top: -180px;
+    z-index: 3;
     flex-direction: row;
-    /* aspect-ratio: auto */
 }
 
 .poster img{
-    height: 79vh;
+    height: auto;
     width: 30vw;
     background-color: black;
     position: relative;
-    top: -240px;
+    /* bottom: 225px; */
     z-index: 3;
-    left: 15px;
+    /* left: 15px; */
     border-radius: 36px;
     box-shadow: 10px;
     flex-wrap: wrap;
+    aspect-ratio: 9/13;
 }
 
 .vid_box video{
@@ -88,7 +105,7 @@ body {
     z-index: 2;
     width: 65vw;
     left: 35px;
-    top: -120px;
+    /* top: -120px; */
     border-radius: 36px;
     flex-wrap: wrap;
 

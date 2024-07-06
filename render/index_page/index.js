@@ -46,6 +46,7 @@ document.getElementById("lib").onclick = function(){
 //sends to default home page
 document.getElementById("home").onclick = function(){
   window.location.href = "index.html"
+  sessionStorage.removeItem('searchQuery');
 }
 
 //sends to more-info page

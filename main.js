@@ -7,8 +7,8 @@ function createMainWindow() {
         title: 'Test',
         width: 1280,
         height: 720,
-        minWidth: 500,
-        minHeight: 650,
+        minWidth: 1168,
+        minHeight: 657,
         webPreferences:{
             nodeIntegration:true,
             contextIsolation:false
