@@ -103,12 +103,12 @@ body {
 .vid_box video{
     position: relative;
     z-index: 2;
+    height: auto;
     width: 65vw;
     left: 35px;
     /* top: -120px; */
     border-radius: 36px;
-    flex-wrap: wrap;
-
+    align-self: flex-end;
 }
 
 .vertical_navbar {
