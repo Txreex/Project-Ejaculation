@@ -37,6 +37,22 @@ body {
     opacity: 50%;
     position:absolute; 
     bottom:60px;
+    display: flex;
+    justify-content: center;
+}
+.name{
+    z-index: 2;
+    width: 100vw;
+    height: 10vh;
+    position:absolute; 
+    bottom:60px;
+    display: flex;
+    justify-content: center;
+}
+.name h2{
+    position: relative;
+    left: -10px;
+    top: 2vh;
 }
 
 .header_image{
@@ -53,35 +69,29 @@ body {
 
 .logo{
     z-index: 2;
-    position:absolute; 
-    bottom:70px;
-    left: 50%;
-    height: 170px;
-    top: 100px;
-    transform: translateX(-50%);
-    border: 3px solid red;
+    position:absolute;
+}
+.fit{
+    width: 100vw;
     display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    overflow: hidden; 
+    justify-content: center ;
+}
+.fit img {
+    position: relative;
+    top: -2vh;
+    width: 30vw;
 }
 
-.logo img{
-    position: relative;
-    top: 10px;
-    width: 400px;
-    object-fit: cover;
-    /* height: auto; */
-    /* aspect-ratio: 18/9; */
-}
 
 .bund{
-    border: 3px solid red;
+    border: 2px solid red;
     display: flex;
     position: relative;
     /* align-content: flex-end; */
     align-items: flex-end;
-    top: -180px;
+    justify-content: center;
+    gap: 25px;
+    top: -25vh;
     z-index: 3;
     flex-direction: row;
 }
@@ -95,9 +105,9 @@ body {
     z-index: 3;
     /* left: 15px; */
     border-radius: 36px;
-    box-shadow: 10px;
-    flex-wrap: wrap;
-    aspect-ratio: 9/13;
+    /* box-shadow: 10px; */
+    /* flex-wrap: wrap; */
+    /* aspect-ratizo: 9/13; */
 }
 
 .vid_box video{
@@ -105,10 +115,10 @@ body {
     z-index: 2;
     height: auto;
     width: 65vw;
-    left: 35px;
+    /* left: 0px; */
     /* top: -120px; */
     border-radius: 36px;
-    align-self: flex-end;
+    /* align-self: flex-end; */
 }
 
 .vertical_navbar {

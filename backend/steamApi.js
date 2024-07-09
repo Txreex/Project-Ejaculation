@@ -4,7 +4,7 @@ export let appID, name, description, detailed_description, logoUrl, coverUrl, ba
 //Fetchs all required data related to game with the help of steamid of that game
 export async function fetchAppDetails(appId) {
     try {
-      const response = await fetch(`https://store.steampowered.com/api/appdetails?appids=${appId}`);
+      const response = await fetch(`https://store.steampowered.com/api/appdetails?appids=${appId}&l=en`);
       const data = await response.json();
       
       //Specifying which data is required
