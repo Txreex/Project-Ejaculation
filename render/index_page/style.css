@@ -11,8 +11,13 @@ body {
 }
 
 .text-on-vid {
-    height: 20px;
-    width: 800px;
+    /* border: 2px solid red; */
+    height: 45vh;
+    width: 60vw;
+    display: flex;
+    justify-content: space-between;
+    /* gap: -20px; */
+    flex-direction: column;
     top: 180px;
     left: 60px;
 }
@@ -205,4 +210,14 @@ body {
         margin-top: 7px;
         margin-left: 5px;
     }
+}
+
+.bttn{
+    display: flex;
+    gap: 15px;
+}
+
+#Logo{
+    position: relative;
+    top : 50px;
 }
