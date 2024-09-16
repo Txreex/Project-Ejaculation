@@ -11,12 +11,12 @@ body {
 }
 
 .text-on-vid {
-    /* border: 2px solid red; */
+    border: 2px solid red;
     height: 45vh;
     width: 60vw;
     display: flex;
     justify-content: space-between;
-    /* gap: -20px; */
+    gap: -20px;
     flex-direction: column;
     top: 180px;
     left: 60px;
@@ -227,6 +227,9 @@ body {
 }
 
 #Logo{
-    position: relative;
-    top : 50px;
+    /* position: relative;
+    top : 50px; */
+    border: 2px solid purple;
+    max-height: 300px;
+    width: 400px;
 }
